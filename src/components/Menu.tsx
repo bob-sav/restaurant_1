@@ -196,7 +196,7 @@ export default function Menu() {
           </div>
         </div>
       </div>
-      {showModal && (
+      {showModal && selectedDish && (
         <DishModal
           onClose={() => {
             setShowModal(false);

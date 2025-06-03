@@ -50,9 +50,9 @@ export async function fetchMenuFromSheet(): Promise<
     const dishImage = row.dishImage || "";
 
     const item: MenuItem = {
-      name: row.name?.trim(),
-      price: row.price?.trim(),
-      description: row.description?.trim(),
+      name: row.name?.trim() || "",
+      price: row.price?.trim() || "",
+      description: row.description?.trim() || "",
       allergens,
       ingredients,
       dishImage,

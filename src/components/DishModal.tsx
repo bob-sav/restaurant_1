@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import "../styles/globals.css";
+import type { MenuItem } from "@/lib/data/menuTypes";
 
 const ingredientPositions: Record<number, number> = {
   0: (Math.PI * 7) / 6, // 0th ingredient → 210° (7/6 π)
