@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 import { Cormorant_Garamond } from "next/font/google";
 import { DM_Sans } from "next/font/google";
 

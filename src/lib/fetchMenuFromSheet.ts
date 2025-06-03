@@ -1,6 +1,19 @@
 import type { MenuCategory, MenuItem } from "@/lib/data/menuTypes";
 import Papa from "papaparse";
 
+type RawMenuRow = {
+  category?: string;
+  section?: string;
+  column?: string;
+  name?: string;
+  price?: string;
+  description?: string;
+  special?: string;
+  allergens?: string;
+  ingredients?: string;
+  dishImage?: string;
+};
+
 export async function fetchMenuFromSheet(): Promise<
   Record<string, MenuCategory>
 > {
@@ -14,7 +27,7 @@ export async function fetchMenuFromSheet(): Promise<
     skipEmptyLines: true,
   });
 
-  const rows = parsed.data as any[];
+  const rows = parsed.data as RawMenuRow[];
 
   const categories: Record<string, MenuCategory> = {};
 

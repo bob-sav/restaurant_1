@@ -23,7 +23,8 @@ export default function Recipes() {
           <div className="recipes-wrapper">
             <h2 className="recipesTitle">From Our Kitchen</h2>
             <p className="recipesText">
-              A peek behind the scenes — curated dishes and chef's favorites.
+              A peek behind the scenes — curated dishes and chef&#39;s
+              favorites.
             </p>
 
             <div className="galleryGrid">
