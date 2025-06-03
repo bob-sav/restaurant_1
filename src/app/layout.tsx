@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://restaurant_1-beta.vercel.app"),
+  metadataBase: new URL("https://restaurant-1-three.vercel.app"),
   title: "FISH Restaurant",
   description: "Restaurant in the heart of Budapest.",
   manifest: "/manifest.webmanifest",

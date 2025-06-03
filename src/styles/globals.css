@@ -105,6 +105,14 @@ a {
     overflow-x: auto;
     scrollbar-width: none;
   }
+
+  .header-inner {
+    padding: 0.5rem 0;
+  }
+
+  .nav-item {
+    padding: 0 1rem;
+  }
 }
 
 .nav-list {
@@ -537,23 +545,28 @@ li:last-child {
   }
 
   .restaurant-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 0.1rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
+    font-weight: 500;
   }
 
   .restaurant-subtitle {
     font-family: var(--font-dm-sans);
-    font-size: 1rem;
-    font-weight: 200;
+    font-size: 1.2rem;
+    font-weight: 300;
     letter-spacing: 0.3rem;
     margin-bottom: 1rem;
+  }
+
+  .restaurant-description {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
   }
 
   .restaurant-text-wrapper,
   .restaurant-image {
     width: 100%;
+    padding: 1rem;
   }
 
   .restaurant-image figcaption {
