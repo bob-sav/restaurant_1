@@ -39,23 +39,36 @@ export default function Reserve() {
               required
               autoComplete="email"
             />
-            <input
-              type="date"
-              name="date"
-              required
-              onFocus={(e) => (e.target as HTMLInputElement).showPicker?.()}
-              onClick={(e) => (e.target as HTMLInputElement).showPicker?.()}
-              style={{ cursor: "pointer" }}
-            />
 
-            <input
-              type="time"
-              name="time"
-              required
-              onFocus={(e) => (e.target as HTMLInputElement).showPicker?.()}
-              onClick={(e) => (e.target as HTMLInputElement).showPicker?.()}
-              style={{ cursor: "pointer" }}
-            />
+            <div className="form-row">
+              <input
+                type="date"
+                name="date"
+                required
+                onClick={(e) => {
+                  try {
+                    (e.target as HTMLInputElement).showPicker?.();
+                  } catch (err) {
+                    console.warn("showPicker failed:", err);
+                  }
+                }}
+                style={{ cursor: "pointer" }}
+              />
+
+              <input
+                type="time"
+                name="time"
+                required
+                onClick={(e) => {
+                  try {
+                    (e.target as HTMLInputElement).showPicker?.();
+                  } catch (err) {
+                    console.warn("showPicker failed:", err);
+                  }
+                }}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
 
             <select name="guests" required>
               <option value="">Guests</option>

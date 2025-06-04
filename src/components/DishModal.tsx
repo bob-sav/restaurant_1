@@ -40,7 +40,8 @@ export default function DishModal({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" onClick={onClose}>
+    {/* No stopPropagation */}>
         <div className="dish-wrapper" ref={wrapperRef}>
           <div className="dish-backdrop" />
           <img
