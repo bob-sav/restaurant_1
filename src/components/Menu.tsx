@@ -119,9 +119,12 @@ export default function Menu() {
                             {item.allergens?.map((a) => {
                               const Icon = allergenIconMap[a];
                               return Icon ? (
-                                <span className="allergen-wrapper" key={a}>
-                                  <Icon className="allergen-icon" />
-                                  <title>{`${a} allergen`}</title>
+                                <span title={`${a} allergen`}>
+                                  <Icon
+                                    className="allergen-icon"
+                                    aria-label={`${a} allergen`}
+                                    role="img"
+                                  />
                                 </span>
                               ) : (
                                 <span key={a} style={{ color: "red" }}>
