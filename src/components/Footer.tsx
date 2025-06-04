@@ -8,10 +8,9 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="footer-logo">
-            <LogoFish className="logo-icon" />
+            <LogoFish className="footer-icon" />
             <div className="header-title">
               <h2>FISH</h2>
-              <p>Restaurant</p>
             </div>
           </div>
           <div className="footer-socials">
