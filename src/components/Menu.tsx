@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 import DishModal from "@/components/DishModal";
 
+import Image from "next/image";
+
 import { fetchMenuFromSheet } from "@/lib/fetchMenuFromSheet";
 
 import type { MenuCategory } from "@/lib/data/menuTypes";

@@ -5,18 +5,18 @@ import FishDeco from "@/icons/fish_deco.svg";
 export default function Chef() {
   return (
     <section id="chef" className="chef-m" aria-label="Chef">
-      <div className="divider-container">
-        <div className="divider-anchor">
-          <div className="divider"></div>
-          <p className="message">
-            <span>the man behind the scene</span>
-          </p>
-          <p className="message">
-            <span>experience</span>
-          </p>
-        </div>
-      </div>
       <div className="content">
+        <div className="divider-container">
+          <div className="divider-anchor">
+            <div className="divider"></div>
+            <p className="message">
+              <span>the man behind the scene</span>
+            </p>
+            <p className="message">
+              <span>experience</span>
+            </p>
+          </div>
+        </div>
         <div className="chef">
           <div className="chef-wrapper">
             <div className="top-subtitle">OUR CHEF</div>
