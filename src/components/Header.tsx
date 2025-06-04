@@ -46,8 +46,7 @@ export default function Header() {
         <div className="header-logo">
           <LogoFish className="logo-icon" />
           <div className="header-title">
-            <h2>FISH</h2>
-            <p>Restaurant</p>
+            <p>FISH</p>
           </div>
         </div>
 

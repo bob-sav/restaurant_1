@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 
 import DishModal from "@/components/DishModal";
 
-import Image from "next/image";
-
 import { fetchMenuFromSheet } from "@/lib/fetchMenuFromSheet";
 
 import type { MenuCategory } from "@/lib/data/menuTypes";
@@ -47,6 +45,17 @@ export default function Menu() {
   return (
     <section id="menu" className="menu-m" aria-label="Menu">
       <div className="content">
+        <div className="divider-container">
+          <div className="divider-anchor">
+            <div className="divider"></div>
+            <p className="message">
+              <span>perfectly balanced dishes</span>
+            </p>
+            <p className="message">
+              <span>taste of heaven</span>
+            </p>
+          </div>
+        </div>
         <div className="menu">
           <div className="menu-wrapper">
             {/* Section Header */}
@@ -57,15 +66,6 @@ export default function Menu() {
                 <br></br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <div className="menu-deco">
-                <Image
-                  src="/media/text-deco.png"
-                  alt="Images from the Menu"
-                  width={80} // or actual width of your image
-                  height={40} // or actual height of your image
-                  priority // optional: preload this image if it's above the fold
-                />
-              </div>
             </div>
 
             {/* Tabs */}
@@ -104,7 +104,11 @@ export default function Menu() {
                           <div className="menu-item-header">
                             <span className="menu-item-name">{item.name}</span>
                             <span className="menu-item-price">
-                              {item.price}
+                              {new Intl.NumberFormat("de-DE", {
+                                style: "currency",
+                                currency: "EUR",
+                                minimumFractionDigits: 0,
+                              }).format(Number(item.price))}
                             </span>
                           </div>
                           <div className="menu-item-separator" />
@@ -153,7 +157,11 @@ export default function Menu() {
                           <div className="menu-item-header">
                             <span className="menu-item-name">{item.name}</span>
                             <span className="menu-item-price">
-                              {item.price}
+                              {new Intl.NumberFormat("de-DE", {
+                                style: "currency",
+                                currency: "EUR",
+                                minimumFractionDigits: 0,
+                              }).format(Number(item.price))}
                             </span>
                           </div>
                           <div className="menu-item-separator" />
@@ -182,7 +190,13 @@ export default function Menu() {
                     >
                       <div className="menu-item-header">
                         <span className="menu-item-name">{item.name}</span>
-                        <span className="menu-item-price">{item.price}</span>
+                        <span className="menu-item-price">
+                          {new Intl.NumberFormat("de-DE", {
+                            style: "currency",
+                            currency: "EUR",
+                            minimumFractionDigits: 0,
+                          }).format(Number(item.price))}
+                        </span>
                       </div>
                       <div className="menu-item-separator" />
                       <p className="menu-item-description">

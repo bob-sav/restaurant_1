@@ -1,6 +1,9 @@
 import { Cormorant_Garamond } from "next/font/google";
 import { DM_Sans } from "next/font/google";
 
+import { Hanken_Grotesk } from "next/font/google";
+import { Buenard } from "next/font/google";
+
 import Header from "@/components/Header";
 import "../styles/globals.css";
 
@@ -15,6 +18,20 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal"],
+});
+
+const hankenGrotesk = Hanken_Grotesk({
+  variable: "--font-hanken-grotesk",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal"],
+});
+
+const buenard = Buenard({
+  variable: "--font-buenard",
+  subsets: ["latin"],
+  weight: ["400", "700"],
   style: ["normal"],
 });
 
@@ -77,7 +94,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${cormorantGaramond.variable}`}>
+      <body
+        className={`${dmSans.variable} ${cormorantGaramond.variable} ${hankenGrotesk.variable} ${buenard.variable}`}
+      >
         <div className="layout-wrapper">
           <Header />
           <main className="Home">{children}</main>
