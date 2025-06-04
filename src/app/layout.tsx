@@ -85,6 +85,9 @@ export const metadata = {
     description: "Restaurant in the heart of Budapest.",
     images: ["/og-image.png"],
   },
+  other: {
+    "og:logo": "/favicon-96x96.png", // Or a square logo you want to use
+  },
 };
 
 export default function RootLayout({
