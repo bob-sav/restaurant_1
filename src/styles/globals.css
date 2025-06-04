@@ -110,6 +110,7 @@ a {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   padding-inline: 1rem;
+  padding: 0.4rem 0;
 }
 
 li:last-child {
@@ -119,7 +120,7 @@ li:last-child {
 .nav-item {
   position: relative;
   flex: 0 0 auto;
-  padding: 0.5rem 0.7rem;
+  padding: 0.1rem 0.7rem;
   margin-right: 0.5rem;
 }
 
@@ -529,6 +530,7 @@ li:last-child {
   letter-spacing: 0.1rem;
   margin-bottom: 2rem;
   color: #181d21;
+  text-transform: uppercase;
 }
 
 .restaurant-description {
@@ -637,7 +639,7 @@ li:last-child {
   .restaurant {
     flex-direction: column;
     padding: 0 0.5rem;
-    gap: 1;
+    gap: 1rem;
   }
 
   .restaurant-title {
@@ -763,19 +765,21 @@ li:last-child {
   width: auto;
   height: 30px;
   fill: #f41;
-  margin-right: 0.5rem;
-  margin-left: 10rem;
-  margin-bottom: 1.5rem;
+  transform: translate(-30%, 0);
 }
 
 .chef-signo {
   width: auto;
   height: 30px;
   fill: #f41;
-  margin-right: 0.5rem;
-  margin-left: 10rem;
+  transform: translate(-30%, 0);
+}
+
+.fancy-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 60%;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
 }
 
 @media (max-width: 1280px) {
@@ -799,20 +803,15 @@ li:last-child {
   }
 
   .deco {
-    height: 30px;
-    margin-right: 0.5rem;
-    margin-left: 10rem;
-    margin-bottom: 1.5rem;
-    transform: translate(-50%, -50%);
+    height: 25px;
   }
 
   .chef-signo {
-    height: 30px;
-    margin-right: 0.5rem;
-    margin-left: 10rem;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    transform: translate(-50%, -50%);
+    height: 25px;
+  }
+
+  .fancy-wrapper {
+    width: 80%;
   }
 }
 
@@ -825,20 +824,26 @@ li:last-child {
     width: 100%;
   }
 
+  .chef-title {
+    font-size: 4rem;
+  }
+
   .chef-story {
-    width: 90%;
+    width: 100%;
     font-size: 1.1rem;
     line-height: 1.4;
   }
 
   .deco {
-    margin-right: auto;
-    margin-left: auto;
+    height: 20px;
   }
 
   .chef-signo {
-    margin-right: auto;
-    margin-left: auto;
+    height: 20px;
+  }
+
+  .fancy-wrapper {
+    width: 100%;
   }
 }
 
@@ -945,7 +950,7 @@ li:last-child {
 .menu-subsection-title {
   font-family: var(--font-hanken-grotesk);
   font-size: 1.2rem;
-  margin: 2rem 0 1rem;
+  margin: 0.5rem 0 1rem;
   font-weight: 200;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   letter-spacing: 0.1rem;
@@ -976,7 +981,7 @@ li:last-child {
   font-family: var(--font-hanken-grotesk);
   font-size: 1rem;
   font-weight: 400;
-  align-self: end;
+  align-self: center;
 }
 
 .menu-item-separator {
@@ -1000,10 +1005,6 @@ li:last-child {
   flex-wrap: wrap;
 }
 
-.menu-item-description {
-  flex-shrink: 0;
-}
-
 .allergen-wrapper {
   line-height: 0;
 }
@@ -1019,6 +1020,16 @@ li:last-child {
   opacity: 1;
 }
 
+@media (max-width: 1280px) {
+  .menu-item-name {
+    font-size: 1.5rem;
+  }
+
+  .menu-item-description {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .menu {
     padding: 1rem 0.5rem;
@@ -1031,9 +1042,18 @@ li:last-child {
 
   .menu-grid {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .menu-flavor-text {
+    font-size: 0.8rem;
+  }
+
+  .menu-item-name {
+    font-size: 1.3rem;
+  }
+
+  .menu-item-description {
     font-size: 0.8rem;
   }
 }
@@ -1279,6 +1299,26 @@ li:last-child {
 @media (max-width: 768px) {
   .recipes {
     padding: 6rem 0.5rem;
+  }
+
+  .recipesTitle {
+    font-size: 2rem;
+  }
+
+  .recipesText {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 375px) {
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
 

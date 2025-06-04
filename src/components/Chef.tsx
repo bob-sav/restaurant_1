@@ -21,8 +21,9 @@ export default function Chef() {
           <div className="chef-wrapper">
             <div className="top-subtitle">OUR CHEF</div>
             <div className="chef-title">Badar Badabar</div>
-            <FishDeco className="deco" />
-
+            <div className="fancy-wrapper">
+              <FishDeco className="deco" />
+            </div>
             <div className="chef-story">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -33,8 +34,9 @@ export default function Chef() {
                 scelerisque.
               </p>
             </div>
-
-            <FishDeco className="chef-signo" />
+            <div className="fancy-wrapper">
+              <FishDeco className="chef-signo" />
+            </div>
           </div>
         </div>
       </div>
